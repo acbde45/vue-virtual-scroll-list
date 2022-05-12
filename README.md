@@ -1,7 +1,8 @@
-# Vue 3 + Vite
+# vue-virtual-scroll-list
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+vue3可以使用的虚拟滚动列表。
 
-## Recommended IDE Setup
+## reference
+参考vue2版本高星的实现。
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+[vue-virtual-scroll-list](https://github.com/tangbc/vue-virtual-scroll-list)
