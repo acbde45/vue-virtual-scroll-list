@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { defineComponent, shallowRef } from "vue";
 import { Random } from 'mockjs'
 import getSentences from './common/sentences'
 import genUniqueId from './common/gen-unique-id'
@@ -31,16 +32,16 @@ while (count--) {
   })
 }
 
-export default {
+export default defineComponent({
   name: 'DynamicSize',
   data () {
     return {
       total: TOTAL_COUNT.toLocaleString(),
       items: DataItems,
-      itemComponent: Item,
+      itemComponent: shallowRef(Item),
     }
   },
-}
+})
 </script>
 
 <style lang="scss">

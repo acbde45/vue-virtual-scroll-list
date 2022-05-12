@@ -353,9 +353,7 @@ const VirtualScrollList = defineComponent({
       rootTag,
       {
         ref: "root",
-        on: {
-          "&scroll": !pageMode && this.onScroll,
-        },
+        onScroll: !pageMode && this.onScroll,
       },
       {
         default: () => [

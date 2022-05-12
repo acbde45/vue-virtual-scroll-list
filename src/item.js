@@ -3,7 +3,7 @@
  * we need to know their size change at any time
  */
 
-import { h, defineComponent } from "vue";
+import { h, defineComponent, shallowRef } from "vue";
 import emitter from "tiny-emitter/instance";
 import { ItemProps, SlotProps } from "./props";
 
