@@ -3,7 +3,7 @@
  * we need to know their size change at any time
  */
 
-import { h, defineComponent, shallowRef } from "vue";
+import { h, defineComponent } from "vue";
 import emitter from "tiny-emitter/instance";
 import { ItemProps, SlotProps } from "./props";
 
@@ -104,7 +104,7 @@ export const Slot = defineComponent({
 
   props: SlotProps,
 
-  render(h) {
+  render() {
     const { tag, uniqueKey } = this;
 
     return h(
@@ -115,7 +115,7 @@ export const Slot = defineComponent({
           role: uniqueKey,
         },
       },
-      { default: () => this.$slots.default }
+      { default: this.$slots.default }
     );
   },
 });

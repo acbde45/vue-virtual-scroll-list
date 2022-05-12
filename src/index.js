@@ -1,7 +1,7 @@
 import { h, defineComponent } from "vue";
 import emitter from "tiny-emitter/instance";
 import Virtual from "./virtual";
-import { Item } from "./item";
+import { Item, Slot } from "./item";
 import { VirtualProps } from "./props";
 
 const EVENT_TYPE = {
@@ -317,7 +317,7 @@ const VirtualScrollList = defineComponent({
           console.warn(`Cannot get the index '${index}' from data-sources.`);
         }
       }
-      
+
       return {
         default: () => slots,
       };
@@ -364,13 +364,11 @@ const VirtualScrollList = defineComponent({
                 {
                   class: headerClass,
                   style: headerStyle,
-                  props: {
-                    tag: headerTag,
-                    event: EVENT_TYPE.SLOT,
-                    uniqueKey: SLOT_TYPE.HEADER,
-                  },
+                  tag: headerTag,
+                  event: EVENT_TYPE.SLOT,
+                  uniqueKey: SLOT_TYPE.HEADER,
                 },
-                { default: () => header }
+                { default: header }
               )
             : null,
 
@@ -394,13 +392,11 @@ const VirtualScrollList = defineComponent({
                 {
                   class: footerClass,
                   style: footerStyle,
-                  props: {
-                    tag: footerTag,
-                    event: EVENT_TYPE.SLOT,
-                    uniqueKey: SLOT_TYPE.FOOTER,
-                  },
+                  tag: footerTag,
+                  event: EVENT_TYPE.SLOT,
+                  uniqueKey: SLOT_TYPE.FOOTER,
                 },
-                { default: () => footer }
+                { default: footer }
               )
             : null,
 

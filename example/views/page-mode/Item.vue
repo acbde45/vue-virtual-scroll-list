@@ -9,19 +9,20 @@
 </template>
 
 <script>
-import { defineComponent } from "vue"
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'DynamicSizeItem',
+  name: "PageModeItem",
+
   props: {
     source: {
       type: Object,
-      default () {
-        return {}
-      }
-    }
-  }
-})
+      default() {
+        return {};
+      },
+    },
+  },
+});
 </script>
 
 <style lang="scss" scoped>
@@ -33,7 +34,7 @@ export default defineComponent({
     margin-right: 1em;
   }
   .desc {
-    padding-top: .5em;
+    padding-top: 0.5em;
     text-align: justify;
   }
 }
